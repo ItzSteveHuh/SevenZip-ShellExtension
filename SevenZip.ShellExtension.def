@@ -1,0 +1,6 @@
+﻿LIBRARY SevenZip.ShellExtension
+
+EXPORTS
+
+DllCanUnloadNow PRIVATE
+DllGetClassObject PRIVATE
