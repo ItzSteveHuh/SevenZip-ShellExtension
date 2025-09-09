@@ -168,15 +168,15 @@ namespace
         UString path = fs2us(NWindows::NDLL::GetModuleDirPrefix()) + L"7zFM.exe";
         
         // If not found in same directory, try common 7-Zip installation paths
-        if (!NWindows::NFile::NFind::DoesFileExist(us2fs(path)))
+        if NWindows::NFile::NFind::DoesFileExist_FollowLink(us2fs(path))
         {
             // Try Program Files
             path = L"C:\\Program Files\\7-Zip\\7zFM.exe";
-            if (!NWindows::NFile::NFind::DoesFileExist(us2fs(path)))
+            if NWindows::NFile::NFind::DoesFileExist_FollowLink(us2fs(path))
             {
                 // Try Program Files (x86)
                 path = L"C:\\Program Files (x86)\\7-Zip\\7zFM.exe";
-                if (!NWindows::NFile::NFind::DoesFileExist(us2fs(path)))
+                if NWindows::NFile::NFind::DoesFileExist_FollowLink(us2fs(path))
                 {
                     // Fallback to 7z.exe if 7zFM.exe not found
                     path = fs2us(NWindows::NDLL::GetModuleDirPrefix()) + L"7z.exe";
