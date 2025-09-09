@@ -62,7 +62,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;LANG;WIN_LONG_PATH;WINRT_NO_SOURCE_LOCATION;SEVENZIP_SHELL_EXTENSION_EXPORTS;_WINDOWS;_USRDLL;WINRT_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;LANG;WIN_LONG_PATH;WINRT_NO_SOURCE_LOCATION;SEVENZIP_SHELL_EXTENSION_EXPORTS;_WINDOWS;_USRDLL;WINRT_LEAN_AND_MEAN;WINRT_IMPL;WINRT_NO_MAKE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalOptions>/Wv:18 %(AdditionalOptions)</AdditionalOptions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
