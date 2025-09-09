@@ -205,11 +205,12 @@
   <ItemGroup>
     <None Include="SevenZip.ShellExtension.def" />
   </ItemGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <PackageReference Include="Microsoft.Windows.CppWinRT">
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Windows.CppWinRT">
       <Version>2.0.240111.5</Version>
     </PackageReference>
   </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
 </Project>
