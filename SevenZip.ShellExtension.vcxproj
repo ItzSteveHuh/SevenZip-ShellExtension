@@ -16,6 +16,10 @@
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>SevenZip.ShellExtension</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <MileUniCrtDisableRuntimeDebuggingFeature>true</MileUniCrtDisableRuntimeDebuggingFeature>
+    <MileProjectEnableCppWinRTSupport>true</MileProjectEnableCppWinRTSupport>
+    <CppWinRTGenerateWindowsMetadata>false</CppWinRTGenerateWindowsMetadata>
+    <MileProjectUseProjectProperties>true</MileProjectUseProjectProperties>
     <CppWinRTOptimized>true</CppWinRTOptimized>
     <CppWinRTRootNamespaceAutoMerge>true</CppWinRTRootNamespaceAutoMerge>
     <WindowsAppContainer>false</WindowsAppContainer>
