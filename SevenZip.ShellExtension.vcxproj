@@ -66,6 +66,7 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalOptions>/Wv:18 %(AdditionalOptions)</AdditionalOptions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir)SevenZip\CPP;$(ProjectDir)SevenZip\C;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -85,6 +86,7 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalOptions>/Wv:18 %(AdditionalOptions)</AdditionalOptions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir)SevenZip\CPP;$(ProjectDir)SevenZip\C;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
