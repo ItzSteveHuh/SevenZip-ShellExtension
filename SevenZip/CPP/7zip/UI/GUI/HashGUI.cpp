@@ -18,7 +18,7 @@
 
 #include "HashGUI.h"
 
-#include <NanaZip.Modern.h>
+// #include <NanaZip.Modern.h> // Removed - not available in 7-Zip shell extension
 #include <string>
 
 using namespace NWindows;

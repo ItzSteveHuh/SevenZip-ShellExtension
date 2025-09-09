@@ -17,7 +17,7 @@
 
 #include "resource.h"
 
-#include <NanaZip.Modern.h>
+// #include <NanaZip.Modern.h> // Removed - not available in 7-Zip shell extension
 extern CCodecs* g_CodecsObj;
 
 using namespace NWindows;

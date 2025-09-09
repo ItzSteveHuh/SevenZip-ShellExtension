@@ -21,7 +21,7 @@
 #include <Mile.Xaml.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.UI.Xaml.h>
-#include <winrt/NanaZip.Modern.h>
+// #include <winrt/NanaZip.Modern.h> // Removed - not available in 7-Zip shell extension
 
 #pragma pop_macro("GetCurrentTime")
 

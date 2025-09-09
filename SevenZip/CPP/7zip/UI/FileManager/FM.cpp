@@ -39,7 +39,7 @@
 #include "ViewSettings.h"
 
 #include "../../../../../NanaZip.UI.h"
-#include <winrt/NanaZip.Modern.h>
+// #include <winrt/NanaZip.Modern.h> // Removed - not available in 7-Zip shell extension
 
 // **************** NanaZip Modification Start ****************
 #include "../Common/ZipRegistry.h"
@@ -195,7 +195,7 @@ CApp g_App;
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 
-static const wchar_t * const kWindowClass = L"NanaZip.Modern.FileManager";
+static const wchar_t * const kWindowClass = L"7-Zip.FileManager";
 
 #ifdef UNDER_CE
 #define WS_OVERLAPPEDWINDOW ( \

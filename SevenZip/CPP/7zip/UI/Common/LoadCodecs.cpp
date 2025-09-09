@@ -44,7 +44,7 @@ EXPORT_CODECS
 #include "LoadCodecs.h"
 
 // **************** NanaZip Modification Start ****************
-#include <Mile.Helpers.Base.h>
+// #include <Mile.Helpers.Base.h> // Removed - not available in 7-Zip shell extension
 // **************** NanaZip Modification End ****************
 
 using namespace NWindows;

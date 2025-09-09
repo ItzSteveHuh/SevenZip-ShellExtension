@@ -5,7 +5,7 @@
 
 #undef GetCurrentTime
 
-#include <winrt/NanaZip.Modern.h>
+// #include <winrt/NanaZip.Modern.h> // Removed - not available in 7-Zip shell extension
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include "../../../Common/MyWindows.h"

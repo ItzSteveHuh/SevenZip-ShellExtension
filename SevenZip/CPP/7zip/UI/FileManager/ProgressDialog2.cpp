@@ -20,8 +20,8 @@
 #include "ProgressDialog2Res.h"
 
 #include <winrt/Windows.UI.Xaml.Hosting.h>
-#include <Mile.Helpers.CppWinRT.h>
-#include <Mile.Helpers.h>
+// #include <Mile.Helpers.CppWinRT.h> // Removed - not available in 7-Zip shell extension
+// #include <Mile.Helpers.h> // Removed - not available in 7-Zip shell extension
 
 // TODO: Implement messages (_messageList)
 
@@ -405,29 +405,18 @@ bool CProgressDialog::OnInit()
   _dialogCreatedEvent.Set();
 
   m_progressPage.CancelButtonText(
-      ::Mile::WinRT::GetLocalizedString(
-          L"NanaZip.Modern/ProgressPage/CancelButtonText"));
+      L"Cancel"); // TODO: Replace with proper localization
 
   m_progressPage.CancelButtonClicked({ this, &CProgressDialog::OnCancelButtonClicked });
   m_progressPage.PauseButtonClicked({ this, &CProgressDialog::OnPauseButtonClicked });
   m_progressPage.BackgroundButtonClicked({ this, &CProgressDialog::OnBackgroundButtonClicked });
 
-  _background_String = UString(::Mile::WinRT::GetLocalizedString(
-      L"NanaZip.Modern/ProgressPage/BackgroundButtonText"
-  ).c_str());
+  _background_String = UString(L"Background"); // TODO: Replace with proper localization
   _backgrounded_String = _background_String;
-  _foreground_String = UString(::Mile::WinRT::GetLocalizedString(
-      L"NanaZip.Modern/ProgressPage/ForegroundButtonText"
-  ).c_str());
-  _pause_String = UString(::Mile::WinRT::GetLocalizedString(
-      L"NanaZip.Modern/ProgressPage/PauseButtonText"
-  ).c_str());
-  _continue_String = UString(::Mile::WinRT::GetLocalizedString(
-      L"NanaZip.Modern/ProgressPage/ContinueButtonText"
-  ).c_str());
-  _paused_String = UString(::Mile::WinRT::GetLocalizedString(
-      L"NanaZip.Modern/ProgressPage/PausedText"
-  ).c_str());
+  _foreground_String = UString(L"Foreground"); // TODO: Replace with proper localization
+  _pause_String = UString(L"Pause"); // TODO: Replace with proper localization
+  _continue_String = UString(L"Continue"); // TODO: Replace with proper localization
+  _paused_String = UString(L"Paused"); // TODO: Replace with proper localization
 
   SetText(_title);
   SetPauseText();
@@ -938,8 +927,7 @@ bool CProgressDialog::OnExternalCloseMessage()
   // HideItem(IDB_PROGRESS_BACKGROUND);
   // HideItem(IDB_PAUSE);
   m_progressPage.CancelButtonText(
-      ::Mile::WinRT::GetLocalizedString(
-          L"NanaZip.Modern/ProgressPage/CloseButtonText"));
+      L"Close"); // TODO: Replace with proper localization
   m_progressPage.ShowBackgroundButton(false);
   m_progressPage.ShowPauseButton(false);
 

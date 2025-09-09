@@ -29,7 +29,7 @@
 
 #include "PropertyNameRes.h"
 
-#include <NanaZip.Modern.h>
+// #include <NanaZip.Modern.h> // Removed - not available in 7-Zip shell extension
 
 using namespace NWindows;
 using namespace NFile;
