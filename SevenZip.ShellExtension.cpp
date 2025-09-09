@@ -18,20 +18,20 @@
 
 #include <winrt/Windows.Foundation.h>
 
-#include "../SevenZip/CPP/Common/Common.h"
-#include "../SevenZip/CPP/Windows/DLL.h"
-#include "../SevenZip/CPP/Windows/FileDir.h"
-#include "../SevenZip/CPP/Windows/FileFind.h"
-#include "../SevenZip/CPP/Windows/FileName.h"
-#include "../SevenZip/CPP/Windows/ProcessUtils.h"
-#include "../SevenZip/CPP/7zip/UI/Common/ArchiveName.h"
-#include "../SevenZip/CPP/7zip/UI/Common/CompressCall.h"
-#include "../SevenZip/CPP/7zip/UI/Common/ExtractingFilePath.h"
-#include "../SevenZip/CPP/7zip/UI/Common/ZipRegistry.h"
-#include "../SevenZip/CPP/7zip/UI/FileManager/FormatUtils.h"
-#include "../SevenZip/CPP/7zip/UI/FileManager/LangUtils.h"
-#include "../SevenZip/CPP/7zip/UI/Explorer/ContextMenuFlags.h"
-#include "../SevenZip/CPP/7zip/UI/Explorer/resource.h"
+#include "SevenZip/CPP/Common/Common.h"
+#include "SevenZip/CPP/Windows/DLL.h"
+#include "SevenZip/CPP/Windows/FileDir.h"
+#include "SevenZip/CPP/Windows/FileFind.h"
+#include "SevenZip/CPP/Windows/FileName.h"
+#include "SevenZip/CPP/Windows/ProcessUtils.h"
+#include "SevenZip/CPP/7zip/UI/Common/ArchiveName.h"
+#include "SevenZip/CPP/7zip/UI/Common/CompressCall.h"
+#include "SevenZip/CPP/7zip/UI/Common/ExtractingFilePath.h"
+#include "SevenZip/CPP/7zip/UI/Common/ZipRegistry.h"
+#include "SevenZip/CPP/7zip/UI/FileManager/FormatUtils.h"
+#include "SevenZip/CPP/7zip/UI/FileManager/LangUtils.h"
+#include "SevenZip/CPP/7zip/UI/Explorer/ContextMenuFlags.h"
+#include "SevenZip/CPP/7zip/UI/Explorer/resource.h"
 
 namespace
 {
