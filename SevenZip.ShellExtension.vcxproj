@@ -1,104 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <ItemGroup Label="ProjectConfigurations">
-    <ProjectConfiguration Include="Debug|x64">
-      <Configuration>Debug</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|x64">
-      <Configuration>Release</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{7A8B9C2D-4E5F-4A1B-8C3D-9E0F1A2B3C4D}</ProjectGuid>
-    <Keyword>Win32Proj</Keyword>
     <RootNamespace>SevenZip.ShellExtension</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <MileProjectType>DynamicLibrary</MileProjectType>
+    <MileProjectManifestFile>SevenZip.ShellExtension.manifest</MileProjectManifestFile>
+    <WindowsTargetPlatformMinVersion>10.0.19041.0</WindowsTargetPlatformMinVersion>
     <MileUniCrtDisableRuntimeDebuggingFeature>true</MileUniCrtDisableRuntimeDebuggingFeature>
     <MileProjectEnableCppWinRTSupport>true</MileProjectEnableCppWinRTSupport>
     <CppWinRTGenerateWindowsMetadata>false</CppWinRTGenerateWindowsMetadata>
     <MileProjectUseProjectProperties>true</MileProjectUseProjectProperties>
-    <CppWinRTOptimized>true</CppWinRTOptimized>
-    <CppWinRTRootNamespaceAutoMerge>true</CppWinRTRootNamespaceAutoMerge>
-    <WindowsAppContainer>false</WindowsAppContainer>
+    <MileProjectCompanyName>M2-Team</MileProjectCompanyName>
+    <MileProjectFileDescription>SevenZip Modern Shell Extension</MileProjectFileDescription>
+    <MileProjectInternalName>SevenZip.ShellExtension</MileProjectInternalName>
+    <MileProjectLegalCopyright>©Me. All rights reserved.</MileProjectLegalCopyright>
+    <MileProjectOriginalFilename>SevenZip.ShellExtension.dll</MileProjectOriginalFilename>
+    <MileProjectProductName>SevenZip</MileProjectProductName>
   </PropertyGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-  <ImportGroup Label="ExtensionSettings">
-  </ImportGroup>
-  <ImportGroup Label="Shared">
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(Platform)\$(Configuration)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(Platform)\$(Configuration)\</IntDir>
-  </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+  <Import Sdk="Mile.Project.Configurations" Version="1.0.1622" Project="Mile.Project.Platform.x64.props" />
+  <Import Sdk="Mile.Project.Configurations" Version="1.0.1622" Project="Mile.Project.Platform.ARM64.props" />
+  <Import Sdk="Mile.Project.Configurations" Version="1.0.1622" Project="Mile.Project.Cpp.Default.props" />
+  <Import Sdk="Mile.Project.Configurations" Version="1.0.1622" Project="Mile.Project.Cpp.props" />
+ 
+  <ItemDefinitionGroup>
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;LANG;WIN_LONG_PATH;WINRT_NO_SOURCE_LOCATION;SEVENZIP_SHELL_EXTENSION_EXPORTS;_WINDOWS;_USRDLL;WINRT_LEAN_AND_MEAN;WINRT_IMPL;WINRT_NO_MAKE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <AdditionalOptions>/Wv:18 %(AdditionalOptions)</AdditionalOptions>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /Wv:18</AdditionalOptions>
+      <PreprocessorDefinitions>LANG;WIN_LONG_PATH;WINRT_NO_SOURCE_LOCATION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EnableUAC>false</EnableUAC>
+      <LargeAddressAware>true</LargeAddressAware>
       <ModuleDefinitionFile>SevenZip.ShellExtension.def</ModuleDefinitionFile>
+      <MinimumRequiredVersion>10.0</MinimumRequiredVersion>
       <AdditionalDependencies>runtimeobject.lib;comctl32.lib;htmlhelp.lib;comdlg32.lib;Mpr.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+  <ItemDefinitionGroup>
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;LANG;WIN_LONG_PATH;WINRT_NO_SOURCE_LOCATION;SEVENZIP_SHELL_EXTENSION_EXPORTS;_WINDOWS;_USRDLL;WINRT_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <AdditionalOptions>/Wv:18 %(AdditionalOptions)</AdditionalOptions>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary Condition="'$(Configuration)' == 'Debug'">MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeLibrary Condition="'$(Configuration)' == 'Release'">MultiThreaded</RuntimeLibrary>
     </ClCompile>
-    <Link>
-      <SubSystem>Windows</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EnableUAC>false</EnableUAC>
-      <ModuleDefinitionFile>SevenZip.ShellExtension.def</ModuleDefinitionFile>
-      <AdditionalDependencies>runtimeobject.lib;comctl32.lib;htmlhelp.lib;comdlg32.lib;Mpr.lib;%(AdditionalDependencies)</AdditionalDependencies>
-    </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="SevenZip\CPP\7zip\UI\FileManager\PropertyName.cpp" />
@@ -142,7 +82,6 @@
     <ClCompile Include="SevenZip\CPP\7zip\UI\FileManager\RegistryUtils.cpp" />
     <ClCompile Include="SevenZip\CPP\7zip\UI\Explorer\MyMessages.cpp" />
     <ClCompile Include="SevenZip\CPP\7zip\UI\Explorer\StdAfx.cpp" />
-    <ClCompile Include="SevenZip.ShellExtension.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SevenZip\CPP\7zip\UI\Explorer\MyExplorerCommand.h" />
@@ -202,11 +141,15 @@
     <Manifest Include="SevenZip.ShellExtension.manifest" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="SevenZip.ShellExtension.cpp" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="SevenZip.ShellExtension.def" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Mile.Windows.UniCrt">
+      <Version>1.2.410</Version>
+    </PackageReference>
   </ItemGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <ImportGroup Label="ExtensionTargets">
-  </ImportGroup>
+  <Import Sdk="Mile.Project.Configurations" Version="1.0.1622" Project="Mile.Project.Cpp.targets" />
 </Project>
