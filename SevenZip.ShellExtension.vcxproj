@@ -19,6 +19,9 @@
     <RestorePackages>false</RestorePackages>
     <EnableNuGetPackageRestore>false</EnableNuGetPackageRestore>
     <RestoreProjectStyle>None</RestoreProjectStyle>
+    <CppWinRTOptimized>true</CppWinRTOptimized>
+    <CppWinRTRootNamespaceAutoMerge>true</CppWinRTRootNamespaceAutoMerge>
+    <WindowsAppContainer>false</WindowsAppContainer>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
@@ -203,6 +206,10 @@
     <None Include="SevenZip.ShellExtension.def" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <PackageReference Include="Microsoft.Windows.CppWinRT">
+      <Version>2.0.240111.5</Version>
+    </PackageReference>
+  </ItemGroup>
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
 </Project>
