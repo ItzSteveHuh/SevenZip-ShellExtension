@@ -194,9 +194,9 @@ HRESULT CZipContextMenu::InitContextMenu(const wchar_t * /* folder */, const wch
 /////////////////////////////
 // IContextMenu
 
-static LPCSTR const kMainVerb = "SevenZip";
-static LPCSTR const kOpenCascadedVerb = "SevenZip.OpenWithType.";
-static LPCSTR const kCheckSumCascadedVerb = "SevenZip.Checksum";
+static LPCSTR const kMainVerb = "7Zip";
+static LPCSTR const kOpenCascadedVerb = "7Zip.OpenWithType.";
+static LPCSTR const kCheckSumCascadedVerb = "7Zip.Checksum";
 
 
 struct CContextMenuCommand

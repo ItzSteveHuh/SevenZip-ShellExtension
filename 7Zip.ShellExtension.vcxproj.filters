@@ -309,12 +309,12 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Manifest Include="SevenZip.ShellExtension.manifest" />
+    <Manifest Include="7Zip.ShellExtension.manifest" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SevenZip.ShellExtension.cpp" />
+    <ClCompile Include="7Zip.ShellExtension.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="SevenZip.ShellExtension.def" />
+    <None Include="7Zip.ShellExtension.def" />
   </ItemGroup>
 </Project>

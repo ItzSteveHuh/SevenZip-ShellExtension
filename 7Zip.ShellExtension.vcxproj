@@ -2,20 +2,20 @@
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Label="Globals">
     <ProjectGuid>{7A8B9C2D-4E5F-4A1B-8C3D-9E0F1A2B3C4D}</ProjectGuid>
-    <RootNamespace>SevenZip.ShellExtension</RootNamespace>
+    <RootNamespace>7Zip.ShellExtension</RootNamespace>
     <MileProjectType>DynamicLibrary</MileProjectType>
-    <MileProjectManifestFile>SevenZip.ShellExtension.manifest</MileProjectManifestFile>
+    <MileProjectManifestFile>7Zip.ShellExtension.manifest</MileProjectManifestFile>
     <WindowsTargetPlatformMinVersion>10.0.19041.0</WindowsTargetPlatformMinVersion>
     <MileUniCrtDisableRuntimeDebuggingFeature>true</MileUniCrtDisableRuntimeDebuggingFeature>
     <MileProjectEnableCppWinRTSupport>true</MileProjectEnableCppWinRTSupport>
     <CppWinRTGenerateWindowsMetadata>false</CppWinRTGenerateWindowsMetadata>
     <MileProjectUseProjectProperties>true</MileProjectUseProjectProperties>
-    <MileProjectCompanyName>M2-Team</MileProjectCompanyName>
-    <MileProjectFileDescription>SevenZip Modern Shell Extension</MileProjectFileDescription>
-    <MileProjectInternalName>SevenZip.ShellExtension</MileProjectInternalName>
-    <MileProjectLegalCopyright>©Me. All rights reserved.</MileProjectLegalCopyright>
-    <MileProjectOriginalFilename>SevenZip.ShellExtension.dll</MileProjectOriginalFilename>
-    <MileProjectProductName>SevenZip</MileProjectProductName>
+    <MileProjectCompanyName>7Zip</MileProjectCompanyName>
+    <MileProjectFileDescription>7Zip Modern Shell Extension</MileProjectFileDescription>
+    <MileProjectInternalName>7Zip.ShellExtension</MileProjectInternalName>
+    <MileProjectLegalCopyright>© 7Zip. All rights reserved.</MileProjectLegalCopyright>
+    <MileProjectOriginalFilename>7Zip.ShellExtension.dll</MileProjectOriginalFilename>
+    <MileProjectProductName>7Zip</MileProjectProductName>
   </PropertyGroup>
   <Import Sdk="Mile.Project.Configurations" Version="1.0.1622" Project="Mile.Project.Platform.x64.props" />
   <Import Sdk="Mile.Project.Configurations" Version="1.0.1622" Project="Mile.Project.Platform.ARM64.props" />
@@ -29,7 +29,7 @@
     </ClCompile>
     <Link>
       <LargeAddressAware>true</LargeAddressAware>
-      <ModuleDefinitionFile>SevenZip.ShellExtension.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>7Zip.ShellExtension.def</ModuleDefinitionFile>
       <MinimumRequiredVersion>10.0</MinimumRequiredVersion>
       <AdditionalDependencies>runtimeobject.lib;comctl32.lib;htmlhelp.lib;comdlg32.lib;Mpr.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
@@ -138,13 +138,13 @@
     <ResourceCompile Include="SevenZip\CPP\7zip\UI\Explorer\resource.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Manifest Include="SevenZip.ShellExtension.manifest" />
+    <Manifest Include="7Zip.ShellExtension.manifest" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SevenZip.ShellExtension.cpp" />
+    <ClCompile Include="7Zip.ShellExtension.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="SevenZip.ShellExtension.def" />
+    <None Include="7Zip.ShellExtension.def" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Mile.Windows.UniCrt">
